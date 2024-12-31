@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  text-align: center;
+  box-sizing: border-box;
+}
+
+@layer utilities {
+  .scrollbar-hidden {
+    scrollbar-gutter: stable; /* Prevent content shift */
+  }
+}

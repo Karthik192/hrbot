@@ -1,0 +1,11 @@
+Your selected colors:
+
+    Text: #060703 - rgb(6, 7, 3) - hsl(75, 40%, 2%)
+    Background: #fdfefb - rgb(253, 254, 251) - hsl(80, 60%, 99%)
+    Primary: #9eb464 - rgb(158, 180, 100) - hsl(77, 35%, 55%)
+    Secondary: #a5d4b8 - rgb(165, 212, 184) - hsl(144, 35%, 74%)
+    Accent: #80c2b1 - rgb(128, 194, 177) - hsl(165, 35%, 63%)
+
+Realtime Colors link for selected colors: https://www.realtimecolors.com/?colors=060703-fdfefb-9eb464-a5d4b8-80c2b1&fonts=Inter-Inter
+
+Thanks for using RealtimeColors.com!
