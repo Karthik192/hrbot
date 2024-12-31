@@ -11,6 +11,7 @@ function App() {
   const [textInput, setTextInput] = useState("");
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [aboutModalIsOpen, setAboutModalIsOpen] = useState(false);
 
   const ulRef = useRef(null);
   const endOfListRef = useRef(null);
@@ -95,16 +96,6 @@ function App() {
           <h1 className="text-white font-logo text-5xl dark:text-black">...</h1>
         </div>
         <ul className="flex flex-row items-center justify-end  gap-4 w-1/2">
-          <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-            <a className="p-2 rounded-sm text-xl" href="/">
-              About
-            </a>
-          </motion.li>
-          <motion.li whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
-            <a className="p-2 rounded-sm text-xl" href="/">
-              How to use it?
-            </a>
-          </motion.li>
           <motion.li
             whileHover={{ scale: 1.5, rotate: -90 }}
             whileTap={{ scale: 0.95, rotate: 360 }}
