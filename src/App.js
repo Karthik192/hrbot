@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import "./App.css";
 import { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun } from "@fortawesome/free-regular-svg-icons";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 
 function App() {
   // TODO: refactor this code so as to use it as a component - better when routes are defined
@@ -11,7 +11,6 @@ function App() {
   const [textInput, setTextInput] = useState("");
   const [messages, setMessages] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [aboutModalIsOpen, setAboutModalIsOpen] = useState(false);
 
   const ulRef = useRef(null);
   const endOfListRef = useRef(null);
@@ -97,7 +96,7 @@ function App() {
         </div>
         <ul className="flex flex-row items-center justify-end  gap-4 w-1/2">
           <motion.li
-            whileHover={{ scale: 1.5, rotate: -90 }}
+            whileHover={{ scale: 1.5, rotate: -150 }}
             whileTap={{ scale: 0.95, rotate: 360 }}
             onClick={toggleMode}
             className="p-2 w-[5%] cursor-pointer"
@@ -130,14 +129,18 @@ function App() {
             />
           </form>
 
-          <p className="">
-            Just Enter{" "}
-            <em className="text-logo text-text dark:text-textDark">"Hello"</em>{" "}
-            to chat with{" "}
-            <em className="text-logo bg-textPrimary text-textSecondary">
-              HR bot
-            </em>
-          </p>
+          {messages.length === 0 && (
+            <p className="">
+              Just Enter{" "}
+              <em className="text-logo text-text dark:text-textDark">
+                "Hello"
+              </em>{" "}
+              to chat with{" "}
+              <em className="text-logo bg-textPrimary text-textSecondary">
+                HR bot
+              </em>
+            </p>
+          )}
 
           <div className="chatarea h-[70vh] overflow-y-auto scrollbar-thumb-accent scrollbar-track-accentDark scrollbar-thin">
             <ul className="flex flex-col p-1.5 px-4 gap-2" ref={ulRef}>
